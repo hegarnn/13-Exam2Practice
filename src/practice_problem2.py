@@ -3,8 +3,8 @@ PRACTICE Exam 2, practice_problem 2.
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Mark Hays, Amanda Stouder, Aaron Wilkin, their colleagues,
-         and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and Nasser Hegar.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ###############################################################################
 # Students:
@@ -33,7 +33,7 @@ import time
 def main():
     """ Calls the   TEST   functions in this module. """
     run_test_practice_problem2a()
-    run_test_practice_problem2b()
+   # run_test_practice_problem2b()
 
 
 ###############################################################################
@@ -58,6 +58,13 @@ def run_test_practice_problem2a():
     print('--------------------------------------------------')
     print('Testing the   practice_problem2a   function:')
     print('--------------------------------------------------')
+    sequence = [2,4,6,8,3]
+    delta = 1
+    Expected = [3,5,7,9,4]
+    Actual = practice_problem2a(sequence,delta)
+
+    print ('Expected:' + str(Expected))
+    print ('Actual:' + str(Actual))
 
 
 def practice_problem2a(sequence, delta):
@@ -86,6 +93,10 @@ def practice_problem2a(sequence, delta):
     #    DIFFICULTY:      5
     #    TIME ESTIMATE:   5 minutes.
     ###########################################################################
+    new_sequence = []
+    for k in range(len(sequence)):
+        new_sequence += [sequence[k] + delta]
+    return new_sequence
 
 
 def run_test_practice_problem2b():
